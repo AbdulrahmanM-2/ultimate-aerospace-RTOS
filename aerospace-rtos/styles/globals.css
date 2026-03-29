@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #080d14;
+  --bg-panel: #0c1420;
+  --bg-panel2: #0f1a28;
+  --border: #1a3050;
+  --border-bright: #1e4070;
+  --green: #00ff88;
+  --green-dim: #00c060;
+  --green-dark: #003820;
+  --amber: #ffaa00;
+  --amber-dim: #cc7700;
+  --blue: #00aaff;
+  --blue-dim: #0066cc;
+  --red: #ff3333;
+  --red-dim: #cc1111;
+  --purple: #8844ff;
+  --cyan: #00ffee;
+  --text-primary: #c8e0f0;
+  --text-dim: #5a7a99;
+  --text-bright: #e8f4ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Rajdhani', sans-serif;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  user-select: none;
+}
+
+.mono {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Scanline effect */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.03) 2px,
+    rgba(0,0,0,0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Blink animation */
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 4px var(--green); }
+  50% { box-shadow: 0 0 12px var(--green), 0 0 20px var(--green); }
+}
+
+@keyframes pulse-amber {
+  0%, 100% { box-shadow: 0 0 4px var(--amber); }
+  50% { box-shadow: 0 0 12px var(--amber), 0 0 20px var(--amber); }
+}
+
+@keyframes pulse-red {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes horizon-roll {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+@keyframes slide-up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes data-scroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes threat-ping {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(3); opacity: 0; }
+}
+
+@keyframes radar-sweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes engine-fluctuate {
+  0%, 100% { height: 70%; }
+  25% { height: 75%; }
+  50% { height: 68%; }
+  75% { height: 73%; }
+}
