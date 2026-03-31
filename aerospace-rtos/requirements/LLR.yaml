@@ -1,0 +1,9 @@
+- id: LLR-001
+  parent: HLR-001
+  description: Fixed-priority scheduler
+- id: LLR-002
+  parent: HLR-002
+  description: Bounds-checked memory
+- id: LLR-003
+  parent: HLR-003
+  description: ISR < 50us

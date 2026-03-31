@@ -1,1 +1,6 @@
-
+- id: HLR-001
+  description: Deterministic scheduling
+- id: HLR-002
+  description: Memory safety
+- id: HLR-003
+  description: Bounded interrupt latency
