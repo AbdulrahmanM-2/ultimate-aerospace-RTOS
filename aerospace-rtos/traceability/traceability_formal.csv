@@ -1,0 +1,4 @@
+Requirement,Artifact,Proof
+TMR-001,tmr_autopilot.tla,Invariant NoInvalidOutput
+TMR-002,voter.v,majority_valid
+TMR-003,voter.v,failsafe_trigger
