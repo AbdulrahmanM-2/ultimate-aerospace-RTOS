@@ -1,1 +1,1 @@
-
+RTOS layered architecture with ARINC-like partitioning.
