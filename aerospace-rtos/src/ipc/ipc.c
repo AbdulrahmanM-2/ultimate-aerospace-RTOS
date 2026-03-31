@@ -1,1 +1,1 @@
-
+void send_msg(){ /* IPC */ }
