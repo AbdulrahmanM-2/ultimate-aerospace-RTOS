@@ -1,6 +1,9 @@
 
 version: '3'
 services:
-  api:
-    image: node:18
-    command: ["node","-e","console.log('Running')"]
+  mavlink:
+    image: python:3.10
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: python integration/mavlink_control.py
