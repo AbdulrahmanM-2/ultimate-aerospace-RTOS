@@ -1,1 +1,1 @@
-
+print('PX4 bridge initialized')
